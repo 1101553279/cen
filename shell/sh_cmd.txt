@@ -1,0 +1,150 @@
+
+
+learning the shell:
+
+
+5. manipulating files
+		
+		special character
+
+
+		wildcards		-->>	elements
+		   |
+		   V
+		patterns		---->>	 match
+		   |
+		   V
+		selections		--->>  target
+    command			files/directory
+
+	1. wildcards
+		*
+		?
+		[characters]	
+		[!characters]
+	
+	2.patterns
+		*		all filenames
+		g*		all filenames that begin with the characters
+		b*.txt		
+		datat???
+		[abc]*
+		[[:upper:]]*
+		BACKUP.[[:digit:]][[:digit:]]
+		*[![:lower:]]
+
+
+6. working with commands
+	
+	type:	identifying commands
+		an executable program
+		a command built into the shell itself
+		a shell function 
+		an alias
+	which: to determinate the exact location of  given executable
+		only works for executable programs
+		not builtins nor aliases
+	help:
+		help facility available for each of the shell builtins
+		add the -m option to change the format of the output
+	--help:
+		for many executable programs
+	man: most executable programs intended for command line use provide a formal piece of documentation	
+	README and other documentation file
+		software packages have documentation located in 
+		/usr/share/doc
+
+
+7.i/o redirection
+	  _				        __
+	    |				       |	display
+keyboard    | -->stdin ---> cmd --> stdout --> |	files
+files	    |				       |	device
+devices	  __|				       |__
+
+file redirection:
+	>	>>
+	< 	<<
+
+cmd redirection:
+	|	pipeline
+	cmd1 | cmd2
+
+filters
+	sort uniq grep fmt pr head tail tr sed awk
+
+8. expansion:
+	shell handle expansion
+	1. pathname expasion			*
+	2. tilde expansion			~
+	3. arithmetic expansion 		$((expression))
+	4. brace expansion			{str1,str2,str3...} for list
+						{int1..int5} or {al..a5} for range
+	5. parameter expansion			$VAR
+	6. command substitution			$(cmd)
+	7. quoting
+	8. touble quotes		stop the word-splitting and get desired resulted
+	9. single quotes		suppress all expansions	
+	10. escaping characters		quote a single character
+	11. backslash		 	selectively suppress special character
+	12. more backslash tricks
+			\ 	ignore new line character
+			\\	escase	normal character to special
+	
+9. perssions	
+	chmod su sudo chown chgrp
+
+	file		rwx
+	directory	rwx	can chage the contents of the directory
+	
+		
+10. job controls
+	ps kill jobs bg fg
+	SIGTERM is different from SIGKILL	
+	SIGTERM:	given to process, then process act on it
+	SIGKILL:	kernel kill the process immediately
+
+
+
+
+resources:
+	1. midnight commander	
+		contains: 
+			a>. left and right directory panels
+			b>. function key labels
+			c>. menu bar
+			d>. command line
+			e>. mini-status line
+
+		notice:
+			ESC key to function  as meta-key
+				where a function key or alt-key combination is not available 
+				due to interference from outside programs, use ESC instead
+		
+		operations:
+		basic op:
+			alt - t:		change the listing format
+			ctrl-x i:		information mode( only for file )
+			alt - o/alt - i: set the directory content on the other panel
+
+			hotlist:
+				ctrl - \:		display hotlist
+				ctrl-x h:		add a directroy to the hotlist while browsing
+			history:
+				alt - H:		acess history list
+				alt - u:		forward
+				alt - y:		backward
+
+		tagging files		(for mutiple files op)
+			key				meanning
+			insert			tag/untag	(for individual file)
+
+			+				set selection criteria( for tag a group of files or directories)
+			/				a pattern  entry dialog to display
+
+
+			
+
+
+			
+	
