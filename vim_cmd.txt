@@ -1,0 +1,43 @@
+
+u & U			undo
+	u: for last cmd
+	U: for line
+
+%	
+	for match brackets or 
+	
+s/thee/the/g
+	Adding the  g  flag means to substitute globally in the line
+	for change all occurrences of "thee" in the line
+	 4. To change every occurrence of a character string between two lines,
+    Type   :#,#s/old/new/g    where #,# are the line numbers of the range
+                              of lines where the substitution is to be done.
+    Type   :%s/old/new/g      to change every occurrence in the whole file.
+    Type   :%s/old/new/gc     to find every occurrence in the whole file,
+                               with a prompt whether to substitute or not.		
+
+CTRL-O & CTRL-I
+	CTRL-O takes you back to older positions, CTRL-I to newer positions.
+
+v
+	1. v 			
+	2. :
+	3. '<,'>w TEST 
+
+r !ls
+	insert the contents of a file, type  :r FILENAME 
+
+R
+ 	Type a capital  R  to replace more than one character.
+
+J	conbine two lines
+
+ZZ	To exit, use the "ZZ" command.  save && quit
+
+
+:e! If you want to continue editing with Vim: The ":e!" command reloads the original version of the file.
+
+
+
+
+
