@@ -1,3 +1,6 @@
+quickfix 
+tags
+
 
 u & U			undo
 	u: for last cmd
@@ -30,14 +33,28 @@ r !ls
 R
  	Type a capital  R  to replace more than one character.
 
-J	conbine two lines
+J
+    In Vim you can join two lines together, 
 
+w / e   move word
+
+fx/Fx   find x forward / find x backward
+3fx/3Fx find 3th x forward
+tn/Tn   find before character of n
+; / ,   reapt execute fx tn 
+
+%   match parenthesis
+*   select current work where cursor in, and search 
+#   for other direction select -> search 
 ZZ	To exit, use the "ZZ" command.  save && quit
 
 
 :e! If you want to continue editing with Vim: The ":e!" command reloads the original version of the file.
 
+n%  percent
 
+H / M / L           current page home / middle / low
 
+zt / zz / zb        put current line at the top/middle/bottom
 
 
