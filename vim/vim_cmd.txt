@@ -53,9 +53,32 @@ ZZ	To exit, use the "ZZ" command.  save && quit
 
 n%  percent
 
-zt / zz / zb        put current line at the top/middle/bottom
-
 H / M / L           current page home / middle / low
 
+zt / zz / zb        put current line at the top/middle/bottom
 
 
+
+
+quickfix:
+    copen   open quickfix
+    cclose  close quickfix
+    cn      jump to next
+    cp      jump to previous
+    ccN     jump to n item
+    cl      list all items
+
+gtags
+    gtags pattern           search define
+    gtags -c pattern        search prefix is pattern
+    gtags -r pattern        search reference
+    gtags -s pattern        search symbol
+    gtags -g pattern        search grep regular
+    gtags -f file           list file's gtags( % is current file )
+    gtags -P text           search path include text
+    GtagsCursor             search current cursor
+
+    option:
+        -x      ctags cxref format
+        -t      standard ctags format
+        -i      ignore case
