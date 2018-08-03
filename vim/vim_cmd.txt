@@ -59,6 +59,32 @@ zt / zz / zb        put current line at the top/middle/bottom
                     character is anything, and whose the third character is m.
 
 
+c           for change text
+    c$      change to end
+    c0      change to start
+    cc      for line
+
+d2w or 2dw
+    delete 2 words one time
+    delete one word two times 
+
+5rx         set 5 characters to x
+r<enter>    delete one character and insert break line
+.           repeat last change( notice chage )
+/four -> cwfive     change four -> five     repeating a change
+
+V           select one line
+CTRL + v    select blocks
+    o   other end of selection( corner )
+    O   side end of selection( side corner )
+
+3p      paste three times   ( move text )
+xp      swap character
+y       yanking is copying in vim    
+y2w     yank two words
+
+
+
 ctags:
     1. command line : vim -t function      open file where function is in
     2. vim          : ta key

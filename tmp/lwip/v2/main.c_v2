@@ -13,6 +13,7 @@ struct memp{
 
 u8_t mem_base[ BLOCK_NUM ][ BLOCK_SIZE ];
 struct memp *link;
+typedef u8_t ( *block_t)[ BLOCK_SIZE ];
 
 void memp_init( )
 {

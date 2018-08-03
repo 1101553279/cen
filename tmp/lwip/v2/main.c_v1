@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define BLOCK_NUM   10
-#define BLOCK_SIZE  8
+#define BLOCK_SIZE  100
 
 typedef unsigned char u8_t;
 typedef unsigned short u16_t;
@@ -11,37 +11,37 @@ struct memp{
     struct memp *next;
 };
 
-u8_t mem_base[ BLOCK_NUM ][ BLOCK_SIZE ];
-struct memp *link;
+u8_t mem_base[ BLOCK_NUM * BLOCK_SIZE ];
+struct memp *header;
 
 void memp_init( )
 {
     u8_t i = 0;
-    block_t bb;
-
-    link = 0;
-    bb = mem_base;
+    struct memp *pos;
+   
+    header = 0;
+    pos = (struct memp *)mem_base; 
     for( i = 0; i < BLOCK_NUM; i++ )
     {
-       (( struct memp *)bb)->next = link;
-       link = (struct memp *)bb;
-       bb++;
+        pos->next = header;
+        header = pos;
+        pos = (struct memp *)((u8_t *)pos + BLOCK_SIZE);
     }
-    
+
     return;
 }
 
 void memp_print( )
 {
+    struct memp *tmp;
     int i = 0;
-    struct memp *pp;
-
-    pp = link;
-    while( 0 != pp )
+   
+    tmp = header;
+    while( 0 != tmp )
     {
         i++;
-        printf( "%-02d: %#x\r\n", i, pp );
-        pp = pp->next;
+        printf( "%d: %#x\r\n", i, (unsigned int)tmp );
+        tmp = tmp->next;
     }
 
     return;
