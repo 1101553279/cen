@@ -82,6 +82,34 @@ CTRL + v    select blocks
 xp      swap character
 y       yanking is copying in vim    
 y2w     yank two words
+"*yy    yank current line to * register clipboard
+"*p     put * register clipboard 
+
+dw      delete word'end
+daw     delete a word       aw is a ( text object )
+is/as is text object, stand for inner sentence/a sentence
+    cis         change inner sentence       i doesn't include space
+    cas         change a sentence
+    dis         delete inner sentence
+    das         delete a sentence
+three ways for changing in vim
+    operator-motion
+    visual mode
+    operator-text object
+notice: can use text object in visual mode
+
+R   for replace 
+    backspace for restore
+    <INSERT> key for switch normal mode and replace mode
+~   for switch case of character
+I   for jump to head of line, and go to insert mode
+A   for jump to tail of line, and go to insert mode
+
+A mapping enables you to bind a set of Vim commands to a single key.
+    you need to change a word such as "amount" into "{amount}". 
+	:map <F5> i{<Esc>ea}<Esc>
+	:map \p i(<Esc>ea)<Esc>     \p for  word -> (word)
+	:map \c i{<Esc>ea}<Esc>     \c for  word -> {word}
 
 
 

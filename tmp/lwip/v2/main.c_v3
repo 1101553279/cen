@@ -7,10 +7,7 @@ typedef unsigned char u8_t;
 typedef unsigned short u16_t;
 typedef unsigned int u32_t;
 
-#define BLOCK( in ) BLOCK_##in
-
-
-u8_t memp_base[ BLOCK(NUM) ][ BLOCK(SIZE) ];
+u8_t memp_base[ BLOCK_NUM ][ BLOCK_SIZE ];
 
 void *link;
 
@@ -25,7 +22,7 @@ void memp_init( )
     {
         *tmp = link;
         link = ( void *)tmp;
-        tmp = ( void **)(( u8_t *)tmp + BLOCK_SIZE);
+        tmp = ( void * *)(( u8_t *)tmp + BLOCK_SIZE);
     }
 
 
@@ -33,32 +30,6 @@ void memp_init( )
     return;
 }
 
-void memp_print( )
-{
-    u8_t count = 0;
-    u8_t tm = 0;
-    void *nn = 0;
-
-    for( tm = 0; tm < BLOCK_NUM; tm++ )
-    {
-        printf( "%-02d: %#x\r\n", tm+1, memp_base+tm );
-    }
-    printf( "\r\n" );
-
-    count = 0;
-    nn = link; 
-    while( 0 != nn )
-    {
-        count++;
-        printf( "%-02d : %#x\r\n", count, nn );
-        nn = *( void **)nn;
-    }
-
-
-    return;
-}
-
-#if 0
 void memp_print( )
 {
     u8_t count = 0;
@@ -84,6 +55,7 @@ void memp_print( )
     return;
 }
 
+#if 0
 void memp_print( )
 {
     void **tmp;
