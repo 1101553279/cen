@@ -111,6 +111,55 @@ A mapping enables you to bind a set of Vim commands to a single key.
 	:map \p i(<Esc>ea)<Esc>     \p for  word -> (word)
 	:map \c i{<Esc>ea}<Esc>     \c for  word -> {word}
 
+edit more one file
+edit filename
+vim one.txt two.txt three.txt
+    :next :previous :last :first :2next :2previous :wnext :wprevios
+    :args   list current filenames
+
+CTRL + ^
+    switch current file with last file
+
+`"  jump to last position where you leave this file
+`.  jump to last change position in this file
+
+lowercase    mark in file
+uppercase    mark in any file
+
+marks           view all marks
+marks abc       view a/b/c marks path
+
+use yank register           **************
+"l3y        yank to l register
+"lp         pase from l register
+"wdaw       delete a word into w register
+
+:saveas another.txt     save as,you can edit it abri
+:file another.txt       you can view it,no modifiable
+
+:set readonly           forbbid modified
+:set modifiable
+
+:3split two.c           new window 3 lines
+
+3 CTRL + W  +/-         adjust window size
+{heigh} CTRL + W _      set the window height to a specified number of lines: >
+CTRL + W _              set the window height as high as it can be
+CTRL + W K              moving window to the top
+         H
+         J
+         L
+
+Many commands that edit another file have a variant that splits the window.
+For Command-line commands this is done by prepending an "s".  For example:
+":tag" jumps to a tag, ":stag" splits the window and jumps to a
+tag.
+
+gt      goto tab 
+
+
+vimdiff
+
 
 
 ctags:
