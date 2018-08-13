@@ -160,6 +160,17 @@ gt      goto tab
 
 vimdiff
 
+:[range]substitute/pattern/string/[flags]
+range:  5:      ->      :.,.+4
+        visual  ->      :`<, `>
+        ....
+:[range]global/{pattern}/{ command }
+	example:    :g+//+s/foobar/barfoo/g
+    notice: The default range for the global command is the whole file.
+
+gq  for formatting text
+    gggqG   for formatting whole text
+
 
 
 
