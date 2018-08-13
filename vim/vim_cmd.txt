@@ -162,6 +162,8 @@ vimdiff
 
 
 
+
+
 ctags:
     1. command line : vim -t function      open file where function is in
     2. vim          : ta key
