@@ -172,6 +172,31 @@ gq  for formatting text
     gggqG   for formatting whole text
 
 
+:%s/\([^,]*\), \(.*\)/\2 \1/
+\( \)   match part
+[^,]    exclude ,
+*       any times
+\2 \1   backreference
+
+
+:global/^/m 0
+    reverse line order
+
+runtime! ftplugin/man.vim
+    manpage open new window
+    \K
+    :Man function
+
+
+:%s/\s\+$//     trim blanks
+    \s      space
+    \+      one or more 
+    $       to  line end
+    //      substitute nothing
+
+:grep keywords *.c ( in vim )
+
+
 
 
 
