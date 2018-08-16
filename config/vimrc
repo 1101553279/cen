@@ -66,7 +66,7 @@ set showtabline=2   " always show tab line
 set autoindent      " new line auto add previos white space
 set laststatus=2    " always show status line
 
-:runtime! ftplugin/man.vim  " man page show in new window
+runtime! ftplugin/man.vim  " man page show in new window
 
 "common tab color && select tab color 
 highlight TabLine term=underline cterm=bold ctermfg=9 ctermbg=4             
