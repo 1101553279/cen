@@ -1,6 +1,4 @@
-*.[ao]
 *.map
-*.out
 GPATH
 GRTAGS
 GSYMS
