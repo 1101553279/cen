@@ -7,12 +7,13 @@ RAMDISK = #-DRAMDISK=512
 AS86	=as86 -0 -a
 LD86	=ld86 -0
 
-AS	=gas
-LD	=gld
+#AS	=gas
+#LD	=gld
+AS	=as --32
+LD	=ld -m elf_i386
 LDFLAGS	=-s -x -M
 CC	=gcc $(RAMDISK)
-CFLAGS	=-Wall -O -fstrength-reduce -fomit-frame-pointer \
--fcombine-regs -mstring-insns
+CFLAGS	=-Wall -O -fstrength-reduce -fomit-frame-pointer -w -m32
 CPP	=cpp -nostdinc -Iinclude
 
 #
