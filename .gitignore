@@ -1,5 +1,6 @@
-*[.o]
-*[.out]
+*.[ao]
+*.map
+*.out
 GPATH
 GRTAGS
 GSYMS
