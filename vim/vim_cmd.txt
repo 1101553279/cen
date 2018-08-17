@@ -197,8 +197,10 @@ runtime! ftplugin/man.vim
 :grep keywords *.c ( in vim )
 
 
-
-
+[[      previous {
+]]      next {
+[]      previous }
+][      next }
 
 ctags:
     1. command line : vim -t function      open file where function is in
