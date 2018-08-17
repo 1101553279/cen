@@ -123,6 +123,7 @@ mm_t *pool_init( u8_t *base, u16_t num, u16_t size )
     return mm;
 }
 
+
 void *pool_alloc( mm_t *mm )
 {
     void *ret;
