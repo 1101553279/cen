@@ -7,7 +7,7 @@ static char rcsid[] = "$Id: stack.c 6 2007-01-22 00:45:22Z drhanson $";
 #define T Stack_T
 struct T {
 	int count;                  // element number
-	struct elem {               // element information
+	struct elem {               // element
 		void *x;                // element context
 		struct elem *link;      // for element link list
 	} *head;                    // elemnt link list head

@@ -1,14 +1,14 @@
 # Source, Executable, Includes, Library Defines
 INCL   = 
-SRC    =
+SRC    = main.c  mem.c except.c arith.c
 OBJ    = $(SRC:.c=.o)
 LIBS   = 
-EXE    = exe.out
+EXE    = a.out
 
 # Compiler, Linker Defines
 CC      = /usr/bin/gcc
-CFLAGS  =
 #CFLAGS  = -ansi -pedantic -Wall -O2
+CFLAGS  =
 LIBPATH = -L.
 LDFLAGS = -o $(EXE) $(LIBPATH) $(LIBS)
 CFDEBUG = -ansi -pedantic -Wall -g -DDEBUG $(LDFLAGS)
