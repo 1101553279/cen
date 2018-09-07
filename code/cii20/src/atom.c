@@ -82,9 +82,12 @@ const char *Atom_new(const char *str, int len) {
 	struct atom *p;
 	assert(str);
 	assert(len >= 0);
+
 	for (h = 0, i = 0; i < len; i++)
 		h = (h<<1) + scatter[(unsigned char)str[i]];
+
 	h &= NELEMS(buckets)-1;
+
 	for (p = buckets[h]; p; p = p->link)
 		if (len == p->len) {
 			for (i = 0; i < len && p->str[i] == str[i]; )
