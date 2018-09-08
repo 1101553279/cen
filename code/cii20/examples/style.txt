@@ -1,0 +1,24 @@
+consistent conventions for 
+    name variables, 
+    types,
+    routines,
+    the extent permitted by .... 
+    indentation style
+
+seeks to maximize readability and understanding
+
+name variables:
+    longer evocative names -> global variables && routines
+    shorter names -> local variables
+
+routines:
+    short, no more than a page of code
+    routines names -> 
+                    chosen to reflect what the procedures do
+                    and 
+                    what the functions return
+
+keep comments to a minimum
+
+
+
