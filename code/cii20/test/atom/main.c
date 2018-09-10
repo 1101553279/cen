@@ -58,6 +58,4 @@ int main( void )
     lg = LONG_MIN;
     printf( "lg = %u\n", lg );
 #endif
-
-    return 0;
 }

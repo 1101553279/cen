@@ -1,11 +1,9 @@
 #include <stdio.h>
-#include "stack.h"
 
 
+/* start entry */
 int main( void )
 {
-
-
 
     return 0;
 }
