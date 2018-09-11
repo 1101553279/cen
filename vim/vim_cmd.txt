@@ -202,6 +202,42 @@ runtime! ftplugin/man.vim
 []      previous }
 ][      next }
 
+
+command line:
+move
+	CTRL-B or <Home>	to begin of command line
+	CTRL-E or <End>		to end of command line
+
+edit
+    CTRL-W  delete a word
+    CTRL-U  delete all text
+
+swith:
+    insert      switch replace mode and insert mode
+
+cancel:
+    CTRL-C      cancel command mode
+
+list match:
+    CTRL-D      list all match items
+
+
+    CTRL-L      completes the word to the longest unambiguous string.
+
+cat history command:
+    CTRL-P      previous command
+    CTRL-N      next command
+
+command window
+    q:          show command window
+
+
+view abbreviated && commands
+    help option-list
+
+
+
+
 ctags:
     1. command line : vim -t function      open file where function is in
     2. vim          : ta key

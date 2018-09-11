@@ -1,3 +1,5 @@
+*.[ao]
+*.out
 *.map
 GPATH
 GRTAGS
