@@ -22,6 +22,10 @@ int main( void )
     iv = div(-13, 5);
     printf( "div(13, 5): iv.quot = %d, iv.rem = %d\n", iv.quot, iv.rem );
 
+    printf( "\n------- (x/y)*y + x%%y = x-----------\n" );
+    printf( "-13 / 5 = %d, -13 %% 5 = %d\n", -13/5, -13%5 );        
+    printf( "13 / (-5) = %d, 13 %% -5 = %d\n", 13/(-5), 13%-5 );
+
 
     return 0;
 }
