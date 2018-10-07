@@ -1,0 +1,19 @@
+
+structure methods
+    structure analysis
+    structure design
+    structure programming
+
+    base on:  break down for requirments
+    model: concept model -> logical model -> physical model
+                            anaysis       -> design 
+                    data flow diagram     -> module structure diagram
+
+object oriented methods
+    oo analysis
+    oo design
+    oo programming
+
+    base on: something for requirments
+    model: object model -> dynamic model -> function model
+                    
